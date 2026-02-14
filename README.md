@@ -194,41 +194,8 @@ python ui.py
    - Click `▶ Start` to begin the download
    - Monitor progress in the log window
    - Click `⏹ Abbrechen` to cancel if needed
-. On first run, a default configuration is created. You can:
 
-1. **Use the default paths** (recommended for first-time users):
-   - Models: `./models`
-   - Images: `./images`
-   - Downloads: `./downloads`
 
-2. **Customize paths** via the GUI:
-   - Open the **⚙️ Einstellungen** (Settings) tab
-   - Adjust directory paths
-   - Click **💾 Speichern** (Save)
-
-3. **Manual configuration**:
-   - Edit `config.json` directly:
-
-```json
-{
-  "model_output_dir": "./models",
-  "image_output_dir": "./images",
-  "model_download_dir": "./downloads",
-  "api_timeout": 30,
-  "image_placeholder_count": 2
-}
-```
-
-**Note:** Do not commit `config.json` to version control (it's in `.gitignore`). Use `config.json.example` as a template for documentation. Organized in model-specific directories
-  - Pre-formatted YAML frontmatter
-  - Sample images section
-  - Model description and metadata
-  - Test setup templates
-  - LoRA recommendations
-
-- **Images**: `./images/{ModelName}/{VersionName}/`
-  - All sample images from the model version
-  - Automatically converted to optimal format (PNG, JPEG, or GIF)
 
 ## 📁 Configuration
 
@@ -268,11 +235,6 @@ ai-model-fetcher/
 - Includes YAML frontmatter for metadata
 - Uses media sliders for image galleries
 - Pre-formatted tables for settings and configurations
-
-### Threading
-- Downloads run in background threads to keep UI responsive
-- Supports cancellation at any time
-- Real-time progress updates via callback mechanism
 
 ## 🐛 Troubleshooting
 
@@ -397,26 +359,6 @@ Variables inside block:
 3. Keep all `{{variable}}` placeholders intact
 4. When you fetch a new model, the placeholder values will be automatically filled
 
-**Example modifications:**
-
-**Change** heading levels:
-```markdown
-# Before
-## 🗼 Sample Images from Models
-
-# After
-### 📸 Sample Gallery
-```
-
-**Reorder** sections by moving blocks around
-
-**Add** new static content (won't be replaced):
-```markdown
-### Custom Section
-This is my custom note about this model.
-```
-
-**Remove** unused sections entirely by deleting the blocks
 
 ### Important Notes
 
