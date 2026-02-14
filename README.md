@@ -1,6 +1,8 @@
-# AI Model Fetcher
+# AI Model Fetcher [WIP]
 
-A Python GUI application for downloading AI model metadata and sample images.
+A Python GUI application for downloading AI model metadata and sample images to generate a Markdown knowledge base file.
+
+Why? I just wanted to automate the process of creating my local AI model knowledge base in [Obsidian](https://obsidian.md/)
 
 ## 🎯 Features
 
